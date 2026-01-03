@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY STUDY TRACKER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 1. 設定字體同背景 */
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        body {
+            font-family: 'Archivo Black', sans-serif;
+            background-color: #f2f2f2;
+            /* 大理石紋背景圖片 */
+            background-image: url('https://www.transparenttextures.com/patterns/marble-surface.png');
+        }
+        /* 2. 定義硬陰影 (Hard Shadow) 效果 */
+        .hard-shadow { box-shadow: 8px 8px 0px 0px #000000; }
+        .orange-shadow { box-shadow: 8px 8px 0px 0px #FF6B00; }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <header class="mb-10 border-b-4 border-black pb-4">
+        <h1 class="text-5xl font-black italic tracking-tighter uppercase">Weekly <span class="text-[#FF6B00]">Missions</span></h1>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="md:col-span-2 bg-white border-4 border-black hard-shadow p-6">
+            <h2 class="text-3xl mb-6 bg-[#FF6B00] inline-block px-2 text-white">ITINERARY / TIMELINE</h2>
+            <div class="space-y-4 border-l-4 border-black pl-6">
+                <div class="relative"><span class="absolute -left-[32px] w-4 h-4 bg-[#FF6B00] border-2 border-black rounded-full"></span>
+                    <p class="text-xl">09:00 - GROUND THEORY STUDY</p>
+                </div>
+                <div class="relative"><span class="absolute -left-[32px] w-4 h-4 bg-white border-2 border-black rounded-full"></span>
+                    <p class="text-xl text-gray-400 font-outline-2">14:00 - MATH TRAINING</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white border-4 border-black hard-shadow p-2 rotate-2 hover:rotate-0 transition-transform">
+            <img src="https://images.dog.ceo/breeds/shiba/shiba-8.jpg" class="grayscale hover:grayscale-0 w-full object-cover h-40">
+            <p class="text-center mt-2 text-sm uppercase italic">Keep Working Hard!</p>
+        </div>
+
+        <div class="md:col-span-3 bg-white border-4 border-black hard-shadow p-6 mt-4">
+            <h2 class="text-2xl mb-6 underline decoration-4 decoration-[#FF6B00]">WEEKLY PROGRESS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-2">1. APTITUDE TEST</p>
+                    <div class="w-full bg-gray-200 border-2 border-black h-6">
+                        <div class="bg-[#FF6B00] h-full border-r-2 border-black" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-2">2. MATH TRAINING</p>
+                    <div class="w-full bg-gray-200 border-2 border-black h-6">
+                        <div class="bg-black h-full border-r-2 border-black" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-2">3. IELTS PRACTICE</p>
+                    <div class="w-full bg-gray-200 border-2 border-black h-6">
+                        <div class="bg-[#FF6B00] h-full border-r-2 border-black" style="width: 20%"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="mb-2">4. GROUND THEORY</p>
+                    <div class="w-full bg-gray-200 border-2 border-black h-6">
+                        <div class="bg-gray-400 h-full border-r-2 border-black" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed right-6 bottom-32 w-16 h-16 bg-[#FF6B00] border-4 border-black hard-shadow flex items-center justify-center text-3xl cursor-pointer active:translate-y-1">
+        ¥
+    </div>
+
+    <div class="fixed bottom-8 left-0 right-0 flex justify-center px-6">
+        <button class="w-full max-w-lg bg-black text-white py-4 border-4 border-black orange-shadow text-2xl font-black uppercase tracking-widest hover:bg-[#FF6B00] hover:text-black">
+            + Log Study Record
+        </button>
+    </div>
+
+</body>
+</html>
